@@ -1,86 +1,205 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #141414;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    text-align: center;
-    width: 1200px;
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #2c2c2c;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .input-group {
-    display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    margin-bottom: 20px;
-  }
-  
-  .checkbox-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .checkbox-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 75%;
-  }
-  
-  label {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 1.7em;
-  }
-  
-  input[type="number"] {
-    padding: 10px;
-    font-size: 2em;
-    border: none;
-    border-radius: 5px;
-    width: 75%;
-    margin: 10px;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.5);
-  }
-  
-  .recommendation {
-    margin-top: 30px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  #recomendacao {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #141414;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .suaidade{
-    color: #fefefe;
-    font-size: 27.2px;
-  }
+.container {
+  text-align: center;
+  width: 900px; /* Ajuste a largura do container cinza */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 1.7em;
+  margin-right: 10px;
+}
+
+.checkbox-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 1.5em;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 2em;
+  border: none;
+  border-radius: 5px;
+  width: 75%;
+  margin: 10px;
+}
+
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  box-shadow: rgb(255, 84, 0) 0px 0px 0px 2px;
+  background-color: rgba(16, 16, 16, 0.5);
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  transform-origin: 0px 10px;
+  border-radius: 4px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: rgba(245, 24, 24, 0.5);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.35em;
+  top: 0.15em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.1em 0.1em 0;
+  transform: rotate(45deg);
+  transition: all 500ms ease-in-out;
+}
+
+.recommendation {
+  margin-top: 30px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#recomendacao {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.suaidade {
+  color: #fefefe;
+  font-size: 27.2px;
+}
+
+.containerblack {
+  width: 940px;
+  max-width: 1260px;
+  margin: 0 auto;
+  background-color: #ff5858;
+  border-radius: 40px;
+  box-shadow: 0 8px 15px rgba(255, 133, 133, 0.651);
+  padding: 30px; /* Adiciona padding para que o container cinza tenha espaço ao redor */
+}
+
+.containerlabel{
+  display: flex;
+  gap: 10px;
+}
+
+/* Hide the default checkbox */
+.containerlabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.containerlabel input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerlabel .checkmark {
+  position: relative;
+  box-shadow: rgb(255, 84, 0) 0px 0px 0px 2px;
+  background-color: rgba(16, 16, 16, 0.5);
+  height: 15px; /* Ajuste do tamanho da checkbox */
+  width: 15px;  /* Ajuste do tamanho da checkbox */
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  transform-origin: 0px 10px;
+  border-radius: 4px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.containerlabel .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;  /* Ajuste para centralizar */
+  top: 1px;   /* Ajuste para centralizar */
+  width: 5px; /* Ajuste do tamanho do checkmark */
+  height: 10px; /* Ajuste do tamanho do checkmark */
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: all 500ms ease-in-out;
+}
+
+.containerlabel input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Estilizando o grupo de checkboxes */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%; /* Ajuste a largura do grupo de checkboxes */
+}
+
+label {
+
+}
