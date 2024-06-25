@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendador de Filmes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="containerblack">
+    <div class="container">
+      <h2>Recomendador de Filmes</h2>
+      <div class="input-group">
+        <label for="idade" class="">Sua idade:</label>
+        <input type="number" id="idade" value="5">
+      </div>
+      <div class="checkbox-container">
+        <div class="checkbox-group">
+          <label class="containerlabel">Gosta de fantasia?
+            <input type="checkbox" id="fantasia">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de aventura?
+            <input type="checkbox" id="aventura">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de drama?
+            <input type="checkbox" id="drama">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de ação?
+            <input type="checkbox" id="acao">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de policial?
+            <input type="checkbox" id="policial">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de romance?
+            <input type="checkbox" id="romance">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de suspense?
+            <input type="checkbox" id="suspense">
+            <div class="checkmark"></div>
+          </label>
+        </div>
+        <div class="checkbox-group">
+          <label class="containerlabel">Gosta de terror?
+            <input type="checkbox" id="terror">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de comédia?
+            <input type="checkbox" id="comedia">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de ficção científica?
+            <input type="checkbox" id="ficcao">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de super-herói?
+            <input type="checkbox" id="heroi">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de animação?
+            <input type="checkbox" id="animacao">
+            <div class="checkmark"></div>
+          </label>
+          <label class="containerlabel">Gosta de esportes?
+            <input type="checkbox" id="esporte">
+            <div class="checkmark"></div>
+          </label>
+        </div>
+      </div>
+      <div class="recommendation">
+        <h3 id="recomendacao">Sua recomendação aparecerá aqui</h3>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
